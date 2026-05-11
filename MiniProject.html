@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="YouthSafe — A student-focused cyber awareness platform teaching digital safety, online privacy, and how to combat cyberbullying.">
+    <title>YouthSafe 🛡️ — Student Cyber Awareness Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="MiniProject.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- ══ SITE-WIDE BACKGROUND LOGO WATERMARK ══ -->
+    <div class="site-bg-logo" aria-hidden="true">
+        <img src="logo.png" alt="">
+    </div>
+
+    <!-- ══ SCROLL PROGRESS BAR ══ -->
+    <div id="progress-bar"></div>
+
+    <!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+    <header id="site-header">
+        <a href="#Home" class="logo">
+            <img src="logo.png" alt="YouthSafe Logo" class="nav-logo-img">
+            YouthSafe
+        </a>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Awareness">Awareness</a></li>
+                <li><a href="#Plans">Plans</a></li>
+                <li><a href="#Glossary">Glossary</a></li>
+                <li><a href="#Quiz" id="nav-quiz-link">Quiz</a></li>
+                <li><a href="#Tips">Tips</a></li>
+                <li id="nav-dashboard-item" style="display:none;"><a href="#Dashboard" id="nav-dashboard-link">Dashboard</a></li>
+                <li><a href="#Register" id="nav-register-link">Register</a></li>
+                <li><a href="#Login" id="nav-login-link">Login</a></li>
+                <li><a href="#Contact" class="nav-cta">Get Help</a></li>
+                <li class="nav-user" id="nav-user-chip">👤 <span id="nav-username"></span><button class="nav-logout"
+                        id="nav-logout-btn">Logout</button></li>
+            </ul>
+            <!-- Dark / Light toggle -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+                <span class="toggle-icon">☀️</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- ═══════════════════════════════════ HERO ══════════════════════════════════ -->
+    <section id="Home">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                🛡️ Cyber Safety Platform for Students
+            </div>
+            <h1 class="hero-title">
+                Browse <span class="grad-teal glitch" data-text="Safely.">Safely.</span><br>
+                Speak <span class="grad-red glitch" data-text="Boldly.">Boldly.</span><br>
+                Stay <span class="grad-yellow glitch" data-text="Secure.">Secure.</span>
+            </h1>
+            <p class="hero-sub">
+                Your ultimate guide to navigate the digital world without fear — protecting your data,
+                combating bullying, and building a positive digital footprint.
+            </p>
+            <div class="hero-chips">
+                <div class="chip">🔒 Privacy Tools</div>
+                <div class="chip">🚫 Anti-Bullying</div>
+                <div class="chip">🎮 Gaming Safety</div>
+                <div class="chip">💡 Digital Literacy</div>
+                <div class="chip">🆘 24/7 Help</div>
+            </div>
+            <div class="hero-actions">
+                <a href="#Awareness" class="btn-primary">Explore Awareness →</a>
+                <a href="#Contact" class="btn-danger">🆘 Get Help Now</a>
+            </div>
+        </div>
+
+        <!-- Floating terminal card -->
+        <div class="hero-terminal fade-up glass-panel-heavy">
+            <div class="terminal-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">threat-scanner.exe</span>
+            </div>
+            <div class="terminal-body">
+                <p><span class="t-green">✔</span> Scanning network environment...</p>
+                <p><span class="t-green">✔</span> Checking password strength...</p>
+                <p><span class="t-yellow">⚠</span> Suspicious link detected in DMs</p>
+                <p><span class="t-red">✘</span> Phishing attempt blocked!</p>
+                <p><span class="t-green">✔</span> <span class="t-blink">Running YouthSafe shield_</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ STATS ═════════════════════════════════ -->
+    <div class="stats-bar">
+        <div class="stat-item fade-up">
+            <span class="stat-num" data-target="7">0</span><span class="stat-unit">+</span>
+            <span class="stat-label">Avg. Daily Screen Hours</span>
+        </div>
+        <div class="stat-item fade-up">
+            <span class="stat-num" data-target="40">0</span><span class="stat-unit">%</span>
+            <span class="stat-label">Students Cyberbullied</span>
+        </div>
+        <div class="stat-item fade-up">
+            <span class="stat-num" data-target="60">0</span><span class="stat-unit">%</span>
+            <span class="stat-label">Teens Exposed to Scams</span>
+        </div>
+        <div class="stat-item fade-up">
+            <span class="stat-num" data-target="24">0</span><span class="stat-unit">/7</span>
+            <span class="stat-label">Support Available</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ ABOUT ════════════════════════════════ -->
+    <section id="About" class="section dark-section">
+        <span class="section-label">About YouthSafe</span>
+        <h2 class="section-title">Built for the Modern Student</h2>
+        <p class="section-desc">A dedicated digital awareness platform designed exclusively to educate, protect, and
+            empower the next generation online.</p>
+        <div class="divider-line"></div>
+
+        <div class="about-grid">
+            <div class="about-col fade-up">
+                <div class="col-head red-head">⚠️ The Problem</div>
+                <ul class="icon-list">
+                    <li>
+                        <div class="li-icon red-icon">📱</div>
+                        <div>Students average <strong>7+ hours</strong> of daily screen time, massively increasing
+                            digital risk exposure.</div>
+                    </li>
+                    <li>
+                        <div class="li-icon red-icon">🎣</div>
+                        <div>High exposure to <strong>scams, online predators</strong> and digital extortion targeting
+                            teens.</div>
+                    </li>
+                    <li>
+                        <div class="li-icon red-icon">🤐</div>
+                        <div>Many students <strong>suffer in silence</strong>, unsure how to report or seek help for
+                            online abuse.</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about-col fade-up">
+                <div class="col-head green-head">✅ Our Mission & Values</div>
+                <ul class="icon-list">
+                    <li>
+                        <div class="li-icon green-icon">📚</div>
+                        <div><strong class="accent-text">Education:</strong> Teach you to spot a scam before you click —
+                            knowledge is your first line of defence.</div>
+                    </li>
+                    <li>
+                        <div class="li-icon yellow-icon">🛡️</div>
+                        <div><strong class="yellow-text">Protection:</strong> Provide exact steps to lock down your
+                            profiles and secure every account.</div>
+                    </li>
+                    <li>
+                        <div class="li-icon green-icon">💪</div>
+                        <div><strong class="accent-text">Empowerment:</strong> Give you the confidence to block, report,
+                            and rise above toxic behaviour.</div>
+                    </li>
+                </ul>
+                <div class="highlight-box">
+                    <p>🌐 YouthSafe is completely <strong>free and anonymous</strong> — designed so every student can
+                        access help without hesitation or fear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ AWARENESS ════════════════════════════ -->
+    <section id="Awareness" class="section">
+        <span class="section-label">What We Cover</span>
+        <h2 class="section-title">Student Awareness Modules</h2>
+        <p class="section-desc">Three focused modules, each packed with practical tools and actionable guidance for the
+            challenges students face every day online.</p>
+        <div class="divider-line"></div>
+
+        <div class="cards-grid">
+            <div class="awareness-card card-red fade-up glass-panel">
+                <span class="card-emoji">🚫</span>
+                <h3 class="card-title">Cyberbullying Defense</h3>
+                <ul class="card-list">
+                    <li>Identify toxic behaviour vs harmless jokes</li>
+                    <li>Safely block abusive users across all platforms</li>
+                    <li>Learn to take valid screenshots for evidence</li>
+                    <li>Access 24/7 anonymous mental health helplines</li>
+                    <li>Step-by-step guide to report to school authorities</li>
+                </ul>
+                <a href="#Contact" class="card-btn">Get Support →</a>
+            </div>
+
+            <div class="awareness-card card-teal fade-up glass-panel">
+                <span class="card-emoji">🔒</span>
+                <h3 class="card-title">Social Media Privacy</h3>
+                <ul class="card-list">
+                    <li>Step-by-step profile lockdown checklists</li>
+                    <li>Disable background location tracking on posts</li>
+                    <li>Manage who can tag you in photos & videos</li>
+                    <li>Curate a professional digital footprint for future</li>
+                    <li>Audit and revoke dangerous third-party app access</li>
+                </ul>
+                <a href="#Tips" class="card-btn">View Tips →</a>
+            </div>
+
+            <div class="awareness-card card-yellow fade-up glass-panel">
+                <span class="card-emoji">🎮</span>
+                <h3 class="card-title">Gaming & Phishing Alerts</h3>
+                <ul class="card-list">
+                    <li>Spot fake "Free V-Bucks / Robux" phishing sites</li>
+                    <li>Avoid malicious links in Discord or Twitch chats</li>
+                    <li>Enable Two-Factor Authentication (2FA) everywhere</li>
+                    <li>Safely mute and report toxic teammates</li>
+                    <li>Recognise social engineering in gaming communities</li>
+                </ul>
+                <a href="#Tips" class="card-btn">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ═══════════════════════════════════ GLOSSARY ══════════════════════════════ -->
+    <section id="Glossary" class="section dark-section">
+        <span class="section-label">Know the Lingo</span>
+        <h2 class="section-title">Jargon Buster 📖</h2>
+        <p class="section-desc">Confused by tech terms? Click any term below to reveal a simple, student-friendly
+            explanation.</p>
+        <div class="divider-line"></div>
+
+        <div class="glossary-grid">
+
+            <div class="gloss-item fade-up">
+                <button class="gloss-trigger" aria-expanded="false">
+                    <span class="gloss-term">🎣 Phishing</span>
+                    <span class="gloss-arrow">›</span>
+                </button>
+                <div class="gloss-panel glass-panel">
+                    <p>A trick where criminals send fake emails, texts or links that look real (like from your bank or
+                        school). If you click them, they steal your password or personal info. Always check the sender's
+                        real email address!</p>
+                    <span class="gloss-tag">Threat Type</span>
+                </div>
+            </div>
+
+            <div class="gloss-item fade-up">
+                <button class="gloss-trigger" aria-expanded="false">
+                    <span class="gloss-term">🔐 Two-Factor Authentication (2FA)</span>
+                    <span class="gloss-arrow">›</span>
+                </button>
+                <div class="gloss-panel glass-panel">
+                    <p>An extra security step when logging in — after your password, you must also enter a code sent to
+                        your phone or email. Even if a hacker gets your password, they still can't get in without that
+                        code!</p>
+                    <span class="gloss-tag">Protection Tool</span>
+                </div>
+            </div>
+
+            <div class="gloss-item fade-up">
+                <button class="gloss-trigger" aria-expanded="false">
+                    <span class="gloss-term">🦠 Malware</span>
+                    <span class="gloss-arrow">›</span>
+                </button>
+                <div class="gloss-panel glass-panel">
+                    <p>Short for "malicious software". It includes viruses, spyware, and ransomware — harmful programs
+                        disguised as normal apps or files that damage your device or steal your data once installed.</p>
+                    <span class="gloss-tag">Threat Type</span>
+                </div>
+            </div>
+
+            <div class="gloss-item fade-up">
+                <button class="gloss-trigger" aria-expanded="false">
+                    <span class="gloss-term">🌐 VPN</span>
+                    <span class="gloss-arrow">›</span>
+                </button>
+                <div class="gloss-panel glass-panel">
+                    <p>Virtual Private Network. It creates a secure, encrypted "tunnel" for your internet traffic so
+                        hackers and even your ISP can't see what you're doing online. Especially useful on public Wi-Fi!
+                    </p>
+                    <span class="gloss-tag">Privacy Tool</span>
+                </div>
+            </div>
+
+
+
+            <div class="gloss-item fade-up">
+                <button class="gloss-trigger" aria-expanded="false">
+                    <span class="gloss-term">🔑 Encryption</span>
+                    <span class="gloss-arrow">›</span>
+                </button>
+                <div class="gloss-panel glass-panel">
+                    <p>The process of scrambling data into an unreadable format so only the intended person (with the
+                        right key) can read it. WhatsApp messages are end-to-end encrypted — meaning only you and the
+                        receiver can read them.</p>
+                    <span class="gloss-tag">Security Concept</span>
+                </div>
+            </div>
+
+            <div class="gloss-item fade-up">
+                <button class="gloss-trigger" aria-expanded="false">
+                    <span class="gloss-term">🤖 Social Engineering</span>
+                    <span class="gloss-arrow">›</span>
+                </button>
+                <div class="gloss-panel glass-panel">
+                    <p>Manipulating people psychologically to reveal confidential information or do something harmful —
+                        no hacking needed. Examples: fake "tech support" calls, impersonating a friend online to ask for
+                        money, or posing as a school official.</p>
+                    <span class="gloss-tag">Threat Type</span>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ QUIZ ═════════════════════════════════ -->
+    <section id="Quiz" class="section">
+        <span class="section-label">Test Yourself</span>
+        <h2 class="section-title">CYBER SECURITY QUIZ 🧠</h2>
+        <p class="section-desc">Test your knowledge on the topics you've learned. Select your categories below to start
+            a personalised challenge!</p>
+        <div class="divider-line"></div>
+
+        <!-- Login Guard Overlay -->
+        <div class="quiz-guard" id="quiz-guard">
+            <div class="quiz-guard-box glass-panel-heavy">
+                <div class="guard-icon">🔒</div>
+                <h3>Login Required</h3>
+                <p>You must be logged in to take the Cyber Safety Quiz. Create a free account or login to begin!</p>
+                <div class="guard-btns">
+                    <a href="#Register" class="btn-primary">📝 Register Free</a>
+                    <a href="#Login" class="btn-outline">🔐 Login</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-wrap" id="quiz-wrap" style="display:none;">
+            <!-- Topic Selection (New) -->
+            <div id="quiz-setup" class="glass-panel">
+                <div class="setup-header">
+                    <h3>Personalise Your Quiz</h3>
+                    <p>Select the topics you want to be tested on based on the Jargon Buster.</p>
+                </div>
+                <div class="topic-grid">
+                    <label class="topic-chip"><input type="checkbox" name="topic" value="Phishing" checked> Phishing
+                        🎣</label>
+                    <label class="topic-chip"><input type="checkbox" name="topic" value="VPN" checked> VPN 🌐</label>
+                    <label class="topic-chip"><input type="checkbox" name="topic" value="Malware" checked> Malware
+                        🦠</label>
+
+                    <label class="topic-chip"><input type="checkbox" name="topic" value="2FA" checked> 2FA 🔐</label>
+
+                    <label class="topic-chip"><input type="checkbox" name="topic" value="Encryption" checked> Encryption
+                        🔑</label>
+
+                    <label class="topic-chip"><input type="checkbox" name="topic" value="Social Engineering" checked>
+                        Social 🤖</label>
+                </div>
+                <button class="btn-primary full-width" id="start-quiz-btn" style="margin-top: 1.5rem;">Start
+                    Personalised Quiz →</button>
+            </div>
+
+            <!-- Question display -->
+            <div class="quiz-card glass-panel" id="quiz-card" style="display:none;">
+                <div class="quiz-header">
+                    <span class="quiz-counter" id="quiz-counter">Question 1 of 6</span>
+                    <div class="quiz-progress-track">
+                        <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+                    </div>
+                </div>
+                <p class="quiz-question" id="quiz-question">Loading…</p>
+                <div class="quiz-options" id="quiz-options"></div>
+                <div class="quiz-feedback" id="quiz-feedback"></div>
+                <button class="btn-primary quiz-next-btn" id="quiz-next" style="display:none;">Next Question →</button>
+            </div>
+
+            <!-- Result display (hidden initially) -->
+            <div class="quiz-result glass-panel-heavy" id="quiz-result" style="display:none;">
+                <div class="result-emoji" id="result-emoji">🏆</div>
+                <h3 class="result-title" id="result-title">Loading…</h3>
+                <p class="result-score" id="result-score"></p>
+                <p class="result-msg" id="result-msg"></p>
+                <button class="btn-primary" id="quiz-restart" style="margin-top:1.5rem;">🔄 Retake Quiz</button>
+                <div class="result-cta">
+                    <button class="btn-primary" id="quiz-go-dashboard" style="margin-top:.5rem;">📊 Go to Dashboard</button>
+                    <a href="#Contact" class="btn-outline" id="quiz-go-contact" style="margin-top:.5rem;">📬 Visit Contact Us →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ DASHBOARD ════════════════════════════ -->
+    <section id="Dashboard" class="section dark-section" style="display: none;">
+        <span class="section-label">Student Portal</span>
+        <h2 class="section-title">Your Dashboard</h2>
+        <p class="section-desc">Track your progress, view your latest scores, and manage your profile.</p>
+        <div class="divider-line"></div>
+
+        <div class="dashboard-grid">
+            <!-- Profile Info Card -->
+            <div class="dash-card glass-panel fade-up">
+                <div class="dash-card-header">
+                    <h3>👤 Profile Information</h3>
+                </div>
+                <div class="dash-card-body">
+                    <p><strong>Name:</strong> <span id="dash-name">...</span></p>
+                    <p><strong>Email:</strong> <span id="dash-email">...</span></p>
+                    <p><strong>School:</strong> <span id="dash-school">...</span></p>
+                </div>
+            </div>
+
+            <!-- Quiz Stats Card -->
+            <div class="dash-card glass-panel fade-up">
+                <div class="dash-card-header">
+                    <h3>📊 Latest Quiz Result</h3>
+                </div>
+                <div class="dash-card-body dash-stats-body">
+                    <div class="dash-stat-circle">
+                        <span id="dash-score-pct">0%</span>
+                    </div>
+                    <p class="dash-score-text" id="dash-score-text">No quiz attempted yet.</p>
+                    <a href="#Quiz" class="btn-outline full-width">Take Quiz Now</a>
+                </div>
+            </div>
+
+            <!-- Achievements Card -->
+            <div class="dash-card glass-panel fade-up">
+                <div class="dash-card-header">
+                    <h3>🏆 Achievements</h3>
+                </div>
+                <div class="dash-card-body dash-badge-body">
+                    <div class="dash-badge" id="dash-badge">
+                        <span class="badge-icon">❓</span>
+                        <span class="badge-text">Take a quiz to earn a badge</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ TIPS ═════════════════════════════════ -->
+    <section id="Tips" class="section dark-section">
+        <span class="section-label">Quick Tips</span>
+        <h2 class="section-title">Your Digital Safety Checklist</h2>
+        <p class="section-desc">Start with these quick wins to dramatically improve your online security today.</p>
+        <div class="divider-line"></div>
+
+        <div class="tips-grid">
+            <div class="tip-card fade-up">
+                <div class="tip-num">01</div>
+                <div class="tip-icon">🔑</div>
+                <h4 class="tip-title">Use Strong Passwords</h4>
+                <p class="tip-desc">Use a mix of uppercase, lowercase, numbers & symbols. Never reuse passwords across
+                    sites. Use a password manager.</p>
+            </div>
+            <div class="tip-card fade-up">
+                <div class="tip-num">02</div>
+                <div class="tip-icon">📲</div>
+                <h4 class="tip-title">Enable 2FA Everywhere</h4>
+                <p class="tip-desc">Two-Factor Authentication stops 99% of automated account hacks. Enable it on every
+                    account you own.</p>
+            </div>
+            <div class="tip-card fade-up">
+                <div class="tip-num">03</div>
+                <div class="tip-icon">🔗</div>
+                <h4 class="tip-title">Think Before You Click</h4>
+                <p class="tip-desc">Hover over links before clicking. If the URL looks suspicious or doesn't match the
+                    sender, don't click it!</p>
+            </div>
+            <div class="tip-card fade-up">
+                <div class="tip-num">04</div>
+                <div class="tip-icon">🔒</div>
+                <h4 class="tip-title">Lock Down Your Profiles</h4>
+                <p class="tip-desc">Set your social media to private. Regularly audit who can see your posts, stories,
+                    and personal information.</p>
+            </div>
+            <div class="tip-card fade-up">
+                <div class="tip-num">05</div>
+                <div class="tip-icon">🌐</div>
+                <h4 class="tip-title">Avoid Public Wi-Fi</h4>
+                <p class="tip-desc">Never log into sensitive accounts on public Wi-Fi. Use a VPN if you must. Prefer
+                    mobile hotspot instead.</p>
+            </div>
+            <div class="tip-card fade-up">
+                <div class="tip-num">06</div>
+                <div class="tip-icon">📢</div>
+                <h4 class="tip-title">Report, Don't Suffer</h4>
+                <p class="tip-desc">If you're being harassed online, document it and report it — to the platform, your
+                    school, or a trusted adult.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ PLANS & PARTNERSHIPS ═════════════════ -->
+    <section id="Plans" class="section">
+        <span class="section-label">Memberships</span>
+        <h2 class="section-title">Join YouthSafe</h2>
+        <p class="section-desc">Choose a plan that fits your needs. Keep yourself, your family, or your school safe.</p>
+        <div class="divider-line"></div>
+
+        <div class="plans-toggle-wrap fade-up">
+            <div class="plans-toggle">
+                <button class="toggle-btn active" data-target="individuals">For Individuals</button>
+                <button class="toggle-btn" data-target="institutions">For Institutions</button>
+                <div class="toggle-pill"></div>
+            </div>
+        </div>
+
+        <div class="plans-grid" id="plans-individuals">
+            <!-- Cyber Scout (Free) -->
+            <div class="plan-card fade-up glass-panel">
+                <h3 class="plan-name">Cyber Scout</h3>
+                <div class="plan-price">Free</div>
+                <p class="plan-sub">Forever access to the basics</p>
+                <ul class="plan-features">
+                    <li>Basic Awareness Modules</li>
+                    <li>Standard Cyber Security Quiz</li>
+                    <li>Full Glossary Access</li>
+                    <li>Anonymous Support & Reporting</li>
+                </ul>
+                <a href="#Register" class="btn-primary full-width">Join Free</a>
+            </div>
+
+            <!-- Cyber Scholar (Premium) -->
+            <div class="plan-card popular fade-up glass-panel-heavy">
+                <div class="popular-badge">Most Popular</div>
+                <h3 class="plan-name">Cyber Scholar</h3>
+                <div class="plan-price">$3<span class="price-mo">/mo</span></div>
+                <p class="plan-sub">For dedicated students</p>
+                <ul class="plan-features">
+                    <li>Everything in Cyber Scout</li>
+                    <li>Advanced Quiz Challenges</li>
+                    <li>Downloadable Certificates</li>
+                    <li>Deep-dive Security Modules</li>
+                    <li>Priority Anonymous Support</li>
+                </ul>
+                <a href="#Register" class="btn-primary full-width">Upgrade Now</a>
+            </div>
+
+            <!-- Guardian Shield (Family) -->
+            <div class="plan-card fade-up glass-panel">
+                <h3 class="plan-name">Guardian Shield</h3>
+                <div class="plan-price">$7<span class="price-mo">/mo</span></div>
+                <p class="plan-sub">Family protection plan</p>
+                <ul class="plan-features">
+                    <li>Up to 5 Student Accounts</li>
+                    <li>Parent Analytics Dashboard</li>
+                    <li>Weekly Progress Digests</li>
+                    <li>Exclusive Parent Safety Guides</li>
+                    <li>Live Q&A Expert Webinars</li>
+                </ul>
+                <a href="#Register" class="btn-primary full-width">Protect Family</a>
+            </div>
+        </div>
+
+        <div class="plans-grid" id="plans-institutions" style="display: none;">
+            <!-- Safe Campus Partner -->
+            <div class="plan-card fade-up glass-panel">
+                <h3 class="plan-name">Safe Campus</h3>
+                <div class="plan-price">Custom<span class="price-mo">/yr</span></div>
+                <p class="plan-sub">For schools & educators</p>
+                <ul class="plan-features">
+                    <li>Bulk Student Management</li>
+                    <li>Educator Analytics Dashboard</li>
+                    <li>Classroom-ready Lesson Plans</li>
+                    <li>Custom School Branding</li>
+                    <li>Direct Escalation Support Line</li>
+                </ul>
+                <a href="#Contact" class="btn-primary full-width">Contact Sales</a>
+            </div>
+
+            <!-- Corporate Sponsor -->
+            <div class="plan-card fade-up glass-panel">
+                <h3 class="plan-name">CSR Sponsor</h3>
+                <div class="plan-price">Sponsor</div>
+                <p class="plan-sub">For NGOs & Corporates</p>
+                <ul class="plan-features">
+                    <li>Sponsor a School/District</li>
+                    <li>"Protected by [Brand]" Badges</li>
+                    <li>Quarterly Impact Reports</li>
+                    <li>Co-branded Webinars & Workshops</li>
+                    <li>PR & Social Media Mentions</li>
+                </ul>
+                <a href="#Contact" class="btn-primary full-width">Become a Sponsor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ AUTH ═════════════════════════════════ -->
+    <section id="Register" class="section">
+        <span class="section-label">Student Portal</span>
+        <h2 class="section-title">Join the Safe Web Community</h2>
+        <p class="section-desc">Create a free anonymous account or login to access personalised resources, track your
+            progress, and get support.</p>
+        <div class="divider-line"></div>
+
+        <div class="plans-toggle-wrap fade-up" style="margin-bottom: 2rem;">
+            <div class="plans-toggle">
+                <button class="toggle-btn auth-toggle-btn active" data-target="register">Create Account</button>
+                <button class="toggle-btn auth-toggle-btn" data-target="login">Student Login</button>
+                <div class="toggle-pill auth-pill"></div>
+            </div>
+        </div>
+
+        <div class="form-container" id="auth-register-wrap">
+            <!-- Register Form -->
+            <div class="form-card fade-up visible glass-panel-heavy">
+                <h3 class="form-title">📝 Create Account</h3>
+                <p class="form-sub">Free • Anonymous • Secure</p>
+                <form id="register-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Your full name"
+                            autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" name="regEmail" placeholder="student@example.com"
+                            autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="school">School / Institution</label>
+                        <input type="text" id="school" name="school" placeholder="Your school name">
+                    </div>
+                    <div class="input-row">
+                        <div class="form-group">
+                            <label for="createPass">Create Password</label>
+                            <input type="password" id="createPass" name="createPass" placeholder="Min. 8 characters">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPass">Confirm Password</label>
+                            <input type="password" id="confirmPass" name="confirmPass" placeholder="Repeat password">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary full-width" id="reg-submit-btn">Join Our Community
+                        →</button>
+                    <div class="form-msg" id="reg-msg"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form-container" id="auth-login-wrap" style="display: none;">
+            <!-- Login Form -->
+            <div class="form-card fade-up visible glass-panel-heavy" id="Login">
+                <h3 class="form-title">🔐 Student Login</h3>
+                <p class="form-sub">Secure your digital footprint</p>
+                <form id="login-form" novalidate>
+                    <div class="form-group">
+                        <label for="loginEmail">Email / Username</label>
+                        <input type="text" id="loginEmail" name="loginEmail" placeholder="Enter your email"
+                            autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPass">Password</label>
+                        <input type="password" id="loginPass" name="loginPass" placeholder="Enter your password"
+                            autocomplete="current-password">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me on this device</label>
+                    </div>
+                    <button type="submit" class="btn-primary full-width" id="login-submit-btn">Secure Login →</button>
+                    <div class="form-msg" id="login-msg"></div>
+                    <p class="form-footnote">Forgot password? <a href="#Contact">Contact support</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ CONTACT ══════════════════════════════ -->
+    <section id="Contact" class="section dark-section">
+        <span class="section-label">Need Help?</span>
+        <h2 class="section-title">Reach Out Anonymously</h2>
+        <p class="section-desc">Whether you're facing cyberbullying, spotted a scam, or just need advice — we're here to
+            help. Your identity stays private.</p>
+        <div class="divider-line"></div>
+
+        <div class="contact-wrap">
+            <div class="contact-info fade-up glass-panel">
+                <div class="info-card">
+                    <span class="info-icon">🆘</span>
+                    <div>
+                        <h4>Emergency Helpline</h4>
+                        <p>Cyberbullying crisis or immediate threat</p>
+                        <strong class="accent-text">Childline: 1098</strong>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📧</span>
+                    <div>
+                        <h4>Email Support</h4>
+                        <p>Non-urgent queries & feedback</p>
+                        <strong class="accent-text">help@youthsafe.in</strong>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🏫</span>
+                    <div>
+                        <h4>School Partnership</h4>
+                        <p>Bring YouthSafe to your institution</p>
+                        <strong class="accent-text">schools@youthsafe.in</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card fade-up glass-panel-heavy">
+                <h3 class="form-title">✉️ Send a Message</h3>
+                <p class="form-sub">All messages are encrypted and anonymous</p>
+                <form id="contact-form" novalidate>
+                    <div class="input-row">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" name="contactName"
+                                placeholder="Optional — stay anonymous">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail"
+                                placeholder="For a reply (optional)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Type</label>
+                        <select id="inquiryType" name="inquiryType">
+                            <option value="" disabled selected>Select an inquiry type</option>
+                            <option value="cyberbullying">Report Cyberbullying</option>
+                            <option value="scam">Suspected Scam / Phishing</option>
+                            <option value="privacy">Privacy Concern</option>
+                            <option value="account">Gaming Account Issue</option>
+                            <option value="feedback">General Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Describe what happened or what you need help with..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-danger full-width">🔒 Send Secure Message</button>
+                    <p class="form-footnote">Your message is end-to-end encrypted. We never share your details.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#Home" class="logo">YouthSafe <span class="logo-shield">🛡️</span></a>
+                <p class="footer-about">Empowering students to navigate the digital world safely, boldly, and securely.
+                    Your safety is our priority.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Insta</a>
+                    <a href="#" class="social-icon">Discord</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-h">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Awareness">Awareness</a></li>
+                    <li><a href="#Plans">Plans</a></li>
+                    <li><a href="#Glossary">Glossary</a></li>
+                    <li><a href="#Quiz">Cyber Security Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-h">Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>📧 help@youthsafe.in</li>
+                    <li>🏫 schools@youthsafe.in</li>
+                    <li>💬 Anonymous Support Chat</li>
+                    <li>📍 Digital Safety Hub, India</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-h">Emergency Support</h4>
+                <div class="footer-support-box">
+                    <span class="support-label">24/7 Helpline</span>
+                    <a href="tel:1098" class="support-val">📞 1098 (Childline)</a>
+                </div>
+                <div class="footer-support-box">
+                    <span class="support-label">Cyber Crime Cell</span>
+                    <a href="tel:1930" class="support-val">📞 1930</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 YouthSafe · All Rights Reserved · Built for a safer digital generation</p>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════ SCRIPTS ══════════════════════════════ -->
+
+
+    <script src="MiniProject.js"></script>
+
+</body>
+
+</html>
